@@ -93,9 +93,10 @@
                         <configuration>
                             <sources>
                                 <source>${project.basedir}/src/main/resources/empleados.xsd</source>
+                                <source>${project.build.directory}/generated-sources/jaxb</source>
                             </sources>
 
-                            <packageName>com.soap.service.infrastructure.soap.schemas</packageName>
+                            <packageName>com.soap_service.soap.empleados</packageName>
                         </configuration>
                     </execution>
                 </executions>
