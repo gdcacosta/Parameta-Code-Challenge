@@ -2,6 +2,7 @@ package com.employee.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -33,5 +34,7 @@ public record EmployeeRequestDTO(
         @NotBlank(message = "El cargo es requerido") String cargo,
         
         @JsonProperty("salario")
-        @NotNull(message = "El salario es requerido") Double salario
+        @NotNull(message = "El salario es requerido")
+        @DecimalMin(value = "1613426", message = "El salario mínimo debe ser 1.613.426")
+        Double salario
 ) {}
